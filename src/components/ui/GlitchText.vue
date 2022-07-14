@@ -1,16 +1,20 @@
 <template>
-	<p ref="el" @mouseenter="start" @mouseleave="stop">
+	<a ref="el" @mouseenter="start" @mouseleave="stop" v-bind="attrs">
 		{{ _text }}
-	</p>
+	</a>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useTextEffect } from '../../composables/useTextEffect';
 
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 const props = defineProps({
+	href: {
+		type: String,
+		default: undefined,
+	},
 	text: {
 		type: String,
 		required: true,
@@ -23,6 +27,18 @@ const el = ref(null);
 
 const isRunning = ref(false);
 const interval = ref(0);
+
+const attrs = computed(() => {
+	if (props.href) {
+		return {
+			href: props.href,
+			target: '_blank',
+			class: 'w-max link-underline link-underline-black',
+		};
+	}
+
+	return {};
+});
 
 const rand = (min: number, max: number) => {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -71,4 +87,24 @@ onMounted(() => {
 });
 </script>
 
-<style></style>
+<style>
+.link-underline {
+	border-bottom-width: 0;
+	background-image: linear-gradient(transparent, transparent),
+		linear-gradient(#fff, #fff);
+	background-size: 0 2px;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-black {
+	background-image: linear-gradient(transparent, transparent),
+		linear-gradient(white, white);
+}
+
+.link-underline:hover {
+	background-size: 100% 2px;
+	background-position: 0 100%;
+}
+</style>
