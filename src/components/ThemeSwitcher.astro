@@ -1,0 +1,95 @@
+<button
+	id="theme-switcher"
+	type="button"
+	class="h-10 w-10 origin-[right_center] transition-all duration-500"
+>
+	<div id="icon-theme-light" class="flex h-10 w-10 items-center justify-center">
+		<span class="material-symbols-outlined"> light_mode</span>
+		<span class="sr-only">Use light theme</span>
+	</div>
+	<div
+		id="icon-theme-dark"
+		class="flex hidden h-10 w-10 items-center justify-center"
+	>
+		<span class="material-symbols-outlined"> dark_mode</span>
+		<span class="sr-only">Use dark theme</span>
+	</div>
+</button>
+
+<script>
+	import invariant from 'tiny-invariant';
+
+	const themes: ('light' | 'dark')[] = ['light', 'dark'];
+	const button = document.querySelector('#theme-switcher');
+
+	invariant(button, 'button should not be null');
+
+	const setup = () => {
+		const themeSaved = localStorage.getItem('theme');
+
+		if (themeSaved) {
+			document.documentElement.classList.add(themeSaved);
+		} else {
+			const prefersDark = window.matchMedia(
+				'(prefers-color-scheme: dark)'
+			).matches;
+			document.documentElement.classList.add(prefersDark ? 'dark' : 'light');
+		}
+
+		window
+			.matchMedia('(prefers-color-scheme: dark)')
+			.addEventListener('change', (event) => {
+				if (!localStorage.getItem('theme')) {
+					document.documentElement.dataset.theme = event.matches
+						? 'dark'
+						: 'light';
+				}
+			});
+	};
+
+	const getThemeCurrent = () =>
+		document.querySelector('html')?.classList.contains('dark')
+			? 'dark'
+			: 'light';
+
+	const getThemeNext = (): 'light' | 'dark' => {
+		const themeCurrent = getThemeCurrent();
+
+		invariant(themeCurrent, 'themeCurrent should not be undefined');
+
+		const indexThemeCurrent = themes.indexOf(themeCurrent);
+
+		return themes[(indexThemeCurrent + 1) % themes.length];
+	};
+
+	const updateIcon = () => {
+		const themeCurrent = getThemeCurrent();
+
+		document
+			.querySelector(`#icon-theme-${themeCurrent}`)
+			?.classList.add('hidden');
+
+		const themeNext = getThemeNext();
+
+		document
+			.querySelector(`#icon-theme-${themeNext}`)
+			?.classList.remove('hidden');
+	};
+
+	button.addEventListener('click', () => {
+		const themeCurrent = getThemeCurrent();
+		const themeNext = getThemeNext();
+
+		document.documentElement?.classList.toggle(themeCurrent);
+		document.documentElement?.classList.toggle(themeNext);
+
+		localStorage.setItem('theme', themeNext);
+
+		updateIcon();
+	});
+
+	setup();
+	updateIcon();
+</script>
+
+<style></style>

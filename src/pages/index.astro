@@ -1,12 +1,52 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { GlitchText } from '../components/GlitchText';
 import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+
+const PROJECTS = [
+	{
+		name: 'sudosport.it',
+		url: 'https://sudosport.it',
+	},
+	{
+		name: 'solana hacker houses events',
+		url: 'https://www.behance.net/gallery/134356333/Solana-RUN-TIME-Interactive-Installation?tracking_source=project_owner_other_projects',
+	},
+	{
+		name: 'prenota.valserviceristorazione.it',
+		url: 'https://prenota.valserviceristorazione.it/login',
+	},
+];
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
+<Layout title="me">
+	<main class="relative">
 		<Navbar />
+
+		<div class="mt-24">
+			<div class="relative">
+				<p class="text-lg sm:text-xl lg:text-2xl">projects</p>
+				<ul>
+					{
+						PROJECTS.map((p, i) => (
+							<li class={`flex items-center py-8 font-medium`}>
+								<span class="text-lg sm:text-xl lg:text-2xl">👉&nbsp;</span>
+								<a
+									href={p.url}
+									class={`truncate ${
+										i === 0
+											? 'text-2xl sm:text-4xl lg:text-6xl'
+											: 'text-xl sm:text-2xl lg:text-3xl'
+									}`}
+								>
+									<GlitchText client:idle text={p.name} />
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
 	</main>
 </Layout>
 
