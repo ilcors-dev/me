@@ -34,11 +34,13 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
 		<div class="order-1 flex justify-between md:order-3 md:justify-evenly">
 			<div class="w-auto md:w-[180px] lg:w-max">
 				<p class="font-bold tracking-tight">Luca Corsetti</p>
-				<GlitchText
-					client:idle
-					className="cursor-pointer tracking-tighter"
-					text="BSc in computer engineering @unibo"
-				/>
+				<a href="https://corsi.unibo.it/1cycle/ComputerEngineering">
+					<GlitchText
+						client:idle
+						className="cursor-pointer tracking-tighter"
+						text="BSc in computer engineering @unibo"
+					/>
+				</a>
 			</div>
 		</div>
 	</div>
