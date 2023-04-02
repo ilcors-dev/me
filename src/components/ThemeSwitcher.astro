@@ -3,14 +3,11 @@
 	type="button"
 	class="h-10 w-10 origin-[right_center] transition-all duration-500"
 >
-	<div id="icon-theme-light" class="flex h-10 w-10 items-center justify-center">
+	<div id="icon-theme-light" class="flex items-center justify-center">
 		<span class="material-symbols-outlined"> light_mode</span>
 		<span class="sr-only">Use light theme</span>
 	</div>
-	<div
-		id="icon-theme-dark"
-		class="flex hidden h-10 w-10 items-center justify-center"
-	>
+	<div id="icon-theme-dark" class="flex hidden items-center justify-center">
 		<span class="material-symbols-outlined"> dark_mode</span>
 		<span class="sr-only">Use dark theme</span>
 	</div>
@@ -24,6 +21,9 @@
 
 	invariant(button, 'button should not be null');
 
+	/**
+	 * Setup the theme based on the user's saved preference or the system preference if no preference is saved.
+	 */
 	const setup = () => {
 		const themeSaved = localStorage.getItem('theme');
 
@@ -40,18 +40,21 @@
 			.matchMedia('(prefers-color-scheme: dark)')
 			.addEventListener('change', (event) => {
 				if (!localStorage.getItem('theme')) {
-					document.documentElement.dataset.theme = event.matches
-						? 'dark'
-						: 'light';
+					document.documentElement.classList.add(
+						event.matches ? 'dark' : 'light'
+					);
 				}
 			});
+
+		updateIcon();
 	};
 
 	const getThemeCurrent = () =>
-		document.querySelector('html')?.classList.contains('dark')
-			? 'dark'
-			: 'light';
+		document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 
+	/**
+	 * Get the next theme in the list of themes.
+	 */
 	const getThemeNext = (): 'light' | 'dark' => {
 		const themeCurrent = getThemeCurrent();
 
@@ -62,6 +65,9 @@
 		return themes[(indexThemeCurrent + 1) % themes.length];
 	};
 
+	/**
+	 * Update the icon to reflect the current theme.
+	 */
 	const updateIcon = () => {
 		const themeCurrent = getThemeCurrent();
 
@@ -76,6 +82,9 @@
 			?.classList.remove('hidden');
 	};
 
+	/**
+	 * Toggle the theme when the button is clicked.
+	 */
 	button.addEventListener('click', () => {
 		const themeCurrent = getThemeCurrent();
 		const themeNext = getThemeNext();
@@ -89,7 +98,6 @@
 	});
 
 	setup();
-	updateIcon();
 </script>
 
 <style></style>
