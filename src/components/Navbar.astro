@@ -10,7 +10,7 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
 		class="mt-10 flex w-full flex-col sm:justify-between md:mt-0 md:flex-row md:justify-around"
 	>
 		<div
-			class="order-2 mt-10 flex flex-col space-y-5 md:order-1 md:mt-0 md:flex-row md:space-y-0 lg:ml-auto lg:mr-28"
+			class="order-2 mt-10 flex flex-col justify-evenly space-y-5 md:order-1 md:mt-0 md:flex-row md:space-y-0 lg:ml-auto"
 		>
 			<div class="w-[200px] md:w-[150px] lg:w-[200px]">
 				<p class="font-bold tracking-tight">member</p>
@@ -22,25 +22,24 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
 					/>
 				</a>
 			</div>
-			<div class="w-[200px] md:w-[150px] lg:w-[200px]">
+			<div class="w-auto lg:w-[200px]">
 				<p class="font-bold tracking-tight">student</p>
 				<GlitchText
 					client:idle
 					className="cursor-pointer tracking-tighter"
-					text="engineering@unibo"
+					text="@unibo"
 				/>
 			</div>
 		</div>
 		<div class="order-1 flex justify-between md:order-3 md:justify-evenly">
-			<div class="w-[200px] md:w-[180px] lg:w-[200px]">
+			<div class="w-auto md:w-[180px] lg:w-max">
 				<p class="font-bold tracking-tight">Luca Corsetti</p>
 				<GlitchText
 					client:idle
 					className="cursor-pointer tracking-tighter"
-					text="fullstack developer"
+					text="BSc in computer engineering @unibo"
 				/>
 			</div>
-			<ThemeSwitcher />
 		</div>
 	</div>
 </nav>
