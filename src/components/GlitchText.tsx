@@ -10,9 +10,8 @@ const ALPHABET = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 export const GlitchText = (props: Props) => {
 	const [_text, setText] = useState(props.text);
-	const [isRunning, setIsRunning] = useState(false);
-	const [int, setInt] = useState(0);
-	const el = useRef(null);
+	const [intervalId, setIntervalId] = useState(0);
+	const el = useRef<HTMLElement>(null);
 
 	const rand = (min: number, max: number) => {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -35,39 +34,36 @@ export const GlitchText = (props: Props) => {
 	};
 
 	const start = () => {
-		if (isRunning) {
+		if (intervalId !== 0) {
 			return;
 		}
 
-		setIsRunning(true);
-
-		setInt(setInterval(effect, 70));
+		setIntervalId(setInterval(effect, 70));
 	};
 
 	const stop = () => {
-		clearInterval(int);
+		clearInterval(intervalId);
+		setIntervalId(0);
 
 		setText(props.text);
-
-		setIsRunning(false);
 	};
 
 	useEffect(() => {
-		// if (!el) {
-		// 	return;
-		// }
-		console.log(el.current);
-		new useTextEffect(el.current as HTMLElement);
+		if (!el || !el.current) {
+			return;
+		}
+
+		new useTextEffect(el.current);
 	}, []);
 
 	return (
-		<p
+		<span
 			className={props.className}
 			ref={el}
 			onMouseEnter={start}
 			onMouseLeave={stop}
 		>
 			{_text}
-		</p>
+		</span>
 	);
 };
