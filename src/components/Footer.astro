@@ -1,0 +1,32 @@
+---
+const LINKS = [
+	{
+		label: 'Twitter',
+		href: 'https://twitter.com/llcors',
+	},
+	{
+		label: 'GitHub',
+		href: 'https://github.com/ilcors-dev',
+	},
+	{
+		label: 'Contact',
+		href: 'mailto:luca.corsetti@proton.me',
+	},
+	{
+		label: 'PGP',
+		href: '/pgp',
+	},
+];
+---
+
+<footer class="p-4">
+	<ul class="flex items-center justify-around">
+		{
+			LINKS.map((link) => (
+				<li>
+					<a href={link.href}>{link.label}</a>
+				</li>
+			))
+		}
+	</ul>
+</footer>

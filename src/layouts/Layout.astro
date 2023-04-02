@@ -1,11 +1,13 @@
 ---
+import Footer from '../components/Footer.astro';
 import ThemeSwitcher from '../components/ThemeSwitcher.astro';
 
 export interface Props {
 	title: string;
+	className?: string;
 }
 
-const { title } = Astro.props;
+const { title, className } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,15 +22,41 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script is:inline>
+			const themeSaved = localStorage.getItem('theme');
+
+			if (themeSaved) {
+				document.documentElement.classList.add(themeSaved);
+			} else {
+				const prefersDark = window.matchMedia(
+					'(prefers-color-scheme: dark)'
+				).matches;
+
+				document.documentElement.classList.add(prefersDark ? 'dark' : 'light');
+			}
+
+			window
+				.matchMedia('(prefers-color-scheme: dark)')
+				.addEventListener('change', (event) => {
+					if (!localStorage.getItem('theme')) {
+						document.documentElement.classList.add(
+							event.matches ? 'dark' : 'light'
+						);
+					}
+				});
+		</script>
 	</head>
 	<body
-		class="relative h-screen transition-all duration-300 dark:bg-black dark:text-white sm:p-10"
+		class="relative m-0 flex h-screen flex-col dark:bg-black dark:text-white"
 	>
 		<!-- <Starfield /> -->
-		<div class="relative p-4 lg:p-6">
-			<ThemeSwitcher className="absolute right-0" />
+		<div
+			class={`relative p-4 transition-all duration-300 sm:p-10 lg:p-6 ${className}`}
+		>
+			<ThemeSwitcher className="absolute right-4" />
 			<slot />
 		</div>
+		<Footer />
 	</body>
 </html>
 <style is:global>
