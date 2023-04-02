@@ -4,10 +4,11 @@ import ThemeSwitcher from '../components/ThemeSwitcher.astro';
 
 export interface Props {
 	title: string;
+	description: string;
 	className?: string;
 }
 
-const { title, className } = Astro.props;
+const { title, className, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -22,6 +23,19 @@ const { title, className } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<!-- social media -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content={description} />
+		<meta
+			property="og:image"
+			content="memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png"
+		/>
+		<meta property="og:url" content="https://ilcors-dev.github.io/me/" />
+		<meta name="twitter:card" content="summary_large_image" />
+
 		<script is:inline>
 			const themeSaved = localStorage.getItem('theme');
 
