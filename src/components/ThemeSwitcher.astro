@@ -9,7 +9,7 @@ const { className } = Astro.props;
 <button
 	id="theme-switcher"
 	type="button"
-	class={`h-10 w-10 origin-[right_center] transition-all duration-500 ${className}`}
+	class={`h-10 w-10 origin-[right_center] flex items-center justify-center transition-all duration-500 ${className} p-4 hover:dark:bg-slate-50/20 hover:bg-black/10 rounded`}
 >
 	<div id="icon-theme-light" class="flex items-center justify-center">
 		<span class="material-symbols-outlined"> light_mode</span>
