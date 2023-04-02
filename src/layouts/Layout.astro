@@ -1,6 +1,4 @@
 ---
-import Starfield from '../components/starfield.astro';
-
 export interface Props {
 	title: string;
 }
@@ -40,5 +38,33 @@ const { title } = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
 			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	a {
+		@apply relative w-max;
+
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #fff;
+	}
+
+	a:hover::before {
+		transform: scaleX(1);
+	}
+
+	a::before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 4px;
+		bottom: 0px;
+		left: 0;
+		background-color: #fff;
+		transform: scaleX(0);
+		transform-origin: top left;
+		transition: transform 0.3s ease;
 	}
 </style>
