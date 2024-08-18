@@ -1,0 +1,10 @@
+{
+    "cSpell.words": [
+        "bindgen",
+        "getrandom",
+        "Memoji"
+    ],
+    "rust-analyzer.linkedProjects": [
+        "src/app/fun/gol/wasm/Cargo.toml"
+    ]
+}
