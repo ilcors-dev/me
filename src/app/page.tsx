@@ -2,7 +2,18 @@ import projects from "@/../config/projects.json";
 import Navbar from "@/components/navbar";
 import ProjectCard from "@/components/project-card";
 import { chunk } from "@/util/lib";
+import { Github, Linkedin, Twitter } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "👋🏻 Hi, I'm Luca",
+  description: "A software engineer from Italy, Bologna.",
+  authors: {
+    name: "Luca Corsetti",
+    url: "https://www.linkedin.com/in/lucacorsettidev",
+  },
+};
 
 export default function Home() {
   return (
@@ -24,6 +35,17 @@ export default function Home() {
           pursuing a Master&apos;s degree in the same field.
         </p>
       </div>
+      <div className="mt-8 flex items-center gap-4">
+        <Link href="https://github.com/ilcors-dev">
+          <Github size={24} />
+        </Link>
+        <Link href="https://www.linkedin.com/in/lucacorsettidev">
+          <Linkedin size={24} />
+        </Link>
+        <Link href="https://x.com/llcors">
+          <Twitter size={24} />
+        </Link>
+      </div>
       <div className="mt-20 space-y-5">
         <h2 className="text-xl font-bold sm:text-2xl">Projects</h2>
 
@@ -31,14 +53,14 @@ export default function Home() {
           {chunk(projects, Math.ceil(projects.length / 3)).map((chunk, i) => (
             <div key={i} className="flex flex-col gap-8">
               {chunk.map((project) => (
-                <Link key={i} href={project.url}>
-                  <ProjectCard
-                    title={project.title}
-                    thumbnailUrl={project.thumbnailUrl}
-                    skills={project.skills}
-                    cardDescription={project.description}
-                  />
-                </Link>
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  thumbnailUrl={project.thumbnailUrl}
+                  skills={project.skills}
+                  cardDescription={project.description}
+                  url={project.githubUrl}
+                />
               ))}
             </div>
           ))}
