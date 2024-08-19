@@ -54,10 +54,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <Script
-          src="https://scripts.simpleanalyticscdn.com/latest.js"
-          data-collect-dnt="true"
-        />
+        <Script src="https://sa.ilcors.dev/latest.js" data-collect-dnt="true" />
       </head>
       <body
         className={classNames(
