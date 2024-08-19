@@ -45,14 +45,17 @@ export default function Home() {
         </p>
       </div>
       <div className="mt-8 flex items-center justify-center gap-4 sm:justify-start">
-        <Link href="https://github.com/ilcors-dev">
-          <Github size={24} />
+        <Link href="https://github.com/ilcors-dev" aria-label="Github Profile">
+          <Github size={24} aria-hidden />
         </Link>
-        <Link href="https://www.linkedin.com/in/lucacorsettidev">
-          <Linkedin size={24} />
+        <Link
+          href="https://www.linkedin.com/in/lucacorsettidev"
+          aria-label="Linkedin Profile"
+        >
+          <Linkedin size={24} aria-hidden />
         </Link>
-        <Link href="https://x.com/llcors">
-          <Twitter size={24} />
+        <Link href="https://x.com/llcors" aria-label="X Profile">
+          <Twitter size={24} aria-hidden />
         </Link>
       </div>
       <div className="mt-20 space-y-5">

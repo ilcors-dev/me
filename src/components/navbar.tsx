@@ -15,6 +15,7 @@ const Navbar = React.forwardRef<
         className,
         "flex flex-col items-center justify-between p-4 sm:p-10 md:flex-row lg:p-6",
       )}
+      role="navigation"
     >
       <MemojiLoop />
       <ThemeSwitcher />

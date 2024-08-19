@@ -60,6 +60,9 @@ const ProjectCard = React.forwardRef<
   },
 );
 
+/**
+ * The content of the project card.
+ */
 const Content = ({
   cardDescription,
   title,
