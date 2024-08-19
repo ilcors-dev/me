@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main className="container mx-auto p-4 sm:p-10 lg:p-6">
       <Navbar />
-      <div className="mt-20 space-y-8">
+      <div className="mt-10 space-y-8">
         <h1 className="text-center text-2xl font-bold sm:text-start sm:text-4xl">
           👋🏻 I&apos;m{" "}
           <span className="bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent dark:from-green-500 dark:to-green-300">
