@@ -20,6 +20,7 @@ const ThemeSwitcher = () => {
     <div className="flex space-x-2">
       <span>🌑</span>
       <Switch
+        aria-label="Toggle Theme Switch"
         checked={theme === "light"}
         onCheckedChange={(v) => setTheme(v ? "light" : "dark")}
       />
