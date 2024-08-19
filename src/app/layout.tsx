@@ -2,8 +2,46 @@ import classNames from "classnames";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png",
+  },
+  authors: {
+    name: "Luca Corsetti",
+    url: "https://www.linkedin.com/in/lucacorsettidev",
+  },
+  keywords: [
+    "software engineer",
+    "full-stack developer",
+    "frontend developer",
+    "backend developer",
+    "Rust developer",
+    "TypeScript developer",
+    "JavaScript developer",
+    "cloud computing",
+    "web development",
+    "Bologna Italy",
+  ],
+  twitter: {
+    card: "summary_large_image",
+    site: "@llcors",
+    creator: "@llcors",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    countryName: "Italy",
+    images: "memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png",
+    siteName: "Luca Corsetti personal website",
+    description: "A software engineer from Italy, Bologna.",
+    url: "https://ilcors.dev",
+  },
+  robots: "index, follow",
+};
 
 export default function RootLayout({
   children,
@@ -15,16 +53,6 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link
-          rel="icon"
-          href="memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png"
-        />
-        <meta
-          property="og:image"
-          content="memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png"
-        />
-        <meta property="og:url" content="https://ilcors-dev.github.io/me/" />
-        <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body
         className={classNames(

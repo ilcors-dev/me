@@ -9,10 +9,6 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "👋🏻 Hi, I'm Luca",
   description: "A software engineer from Italy, Bologna.",
-  authors: {
-    name: "Luca Corsetti",
-    url: "https://www.linkedin.com/in/lucacorsettidev",
-  },
 };
 
 export default function Home() {
