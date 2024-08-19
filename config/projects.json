@@ -2,7 +2,7 @@
     {
         "title": "Writeme",
         "type": "oss",
-        "thumbnailUrl": "/projects/writeme/readme.gif",
+        "thumbnailUrl": "/me/projects/writeme/readme.gif",
         "description": "Cross-platform README.md generator.",
         "skills": [
             "Rust",
@@ -17,7 +17,7 @@
     {
         "title": "Voice To Key",
         "type": "oss",
-        "thumbnailUrl": "/projects/voicetokey/app.jpeg",
+        "thumbnailUrl": "/me/projects/voicetokey/app.jpeg",
         "description": "Map your voice commands to keyboard keys. Built to learn Tauri+Rust+AI.",
         "skills": [
             "Rust",
@@ -33,7 +33,7 @@
     {
         "title": "Up - Unity Game",
         "type": "oss",
-        "thumbnailUrl": "/projects/up/home.png",
+        "thumbnailUrl": "/me/projects/up/home.png",
         "description": "A never released game built in my \"I want to be a game developer era\".",
         "skills": [
             "C#",
@@ -47,7 +47,7 @@
     {
         "title": "Coni Societies Scraper",
         "type": "oss",
-        "thumbnailUrl": "/projects/coni-scraper/main.gif",
+        "thumbnailUrl": "/me/projects/coni-scraper/main.gif",
         "description": "A little scraper to get the list of societies & their info from the Coni website.",
         "skills": [
             "NodeJs",
@@ -61,7 +61,7 @@
     {
         "title": "Litequiz",
         "type": "oss",
-        "thumbnailUrl": "/projects/litequiz/Last Quiz Results.png",
+        "thumbnailUrl": "/me/projects/litequiz/Last Quiz Results.png",
         "description": "A quiz app to study for exams. Also built to learn Rust Programming Language.",
         "skills": [
             "React",
@@ -75,7 +75,7 @@
     {
         "title": "Game Of Life",
         "type": "oss",
-        "thumbnailUrl": "/projects/gameoflife/gol.gif",
+        "thumbnailUrl": "/me/projects/gameoflife/gol.gif",
         "description": "A little implementation of Conway's Game of Life in the CLI.",
         "skills": [
             "Rust"
@@ -87,7 +87,7 @@
     {
         "title": "Cloudmensa",
         "type": "commercial",
-        "thumbnailUrl": "/projects/cloudmensa/homepage.jpeg",
+        "thumbnailUrl": "/me/projects/cloudmensa/homepage.jpeg",
         "description": "A platform built with a local canteen in order to manage orders from other companies. Part of my freelance work in collaboration with astranoto (startup).",
         "skills": [
             "Freelance",
@@ -114,7 +114,7 @@
     {
         "title": "Carkeeper",
         "type": "oss",
-        "thumbnailUrl": "/projects/carkeeper/home.jpg",
+        "thumbnailUrl": "/me/projects/carkeeper/home.jpg",
         "description": "University project for the course of Software Engineering T.",
         "skills": [
             "React Native",
@@ -128,7 +128,7 @@
     {
         "title": "sudosport.com",
         "type": "commercial",
-        "thumbnailUrl": "/projects/sudosport/book.jpeg",
+        "thumbnailUrl": "/me/projects/sudosport/book.jpeg",
         "description": "A platform where sport clubs can manage their members, events, and more. Part of my freelance work in collaboration with astranoto (startup).",
         "skills": [
             "Freelance",
@@ -155,7 +155,7 @@
     {
         "title": "ANY3DP.com",
         "type": "commercial",
-        "thumbnailUrl": "/projects/any3dp/home.jpeg",
+        "thumbnailUrl": "/me/projects/any3dp/home.jpeg",
         "description": "Part of my freelance work in collaboration with astranoto (startup) & 3FESTO. A suite of applications for the 3D manufacturing industry.",
         "skills": [
             "Freelance",
@@ -186,7 +186,7 @@
     {
         "title": "Simple Turrets - Unity Game",
         "type": "oss",
-        "thumbnailUrl": "/projects/simple-turrets/game-2.png",
+        "thumbnailUrl": "/me/projects/simple-turrets/game-2.png",
         "description": "A(nother) never released game built in my \"I want to be a game developer era\". Like a tower defense game, but simpler.",
         "skills": [
             "C#",
