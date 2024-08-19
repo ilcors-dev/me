@@ -2,7 +2,7 @@
     {
         "title": "Writeme",
         "type": "oss",
-        "thumbnailUrl": "projects/writeme/readme.gif",
+        "thumbnailUrl": "projects/writeme/main.gif",
         "description": "Cross-platform README.md generator.",
         "skills": [
             "Rust",
