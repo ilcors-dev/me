@@ -35,7 +35,7 @@ const GameOfLife: React.FC = () => {
 
       const renderLoop = () => {
         universe.tick();
-        universe.render();
+        universe.render("#000000", "#30FF88");
 
         requestAnimationFrame(renderLoop);
       };
