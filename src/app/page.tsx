@@ -2,8 +2,9 @@ import projects from "@/../config/projects.json";
 import Navbar from "@/components/navbar";
 import ProjectCard from "@/components/project-card";
 import { chunk } from "@/util/lib";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { FileUser, Linkedin } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -42,7 +43,13 @@ export default function Home() {
       </div>
       <div className="mt-8 flex items-center justify-center gap-4 sm:justify-start">
         <Link href="https://github.com/ilcors-dev" aria-label="Github Profile">
-          <Github size={24} aria-hidden />
+          <Image
+            height="24"
+            width="24"
+            src="https://unpkg.com/simple-icons@v13/icons/github.svg"
+            alt="Github"
+            aria-hidden
+          />
         </Link>
         <Link
           href="https://www.linkedin.com/in/lucacorsettidev"
@@ -51,7 +58,19 @@ export default function Home() {
           <Linkedin size={24} aria-hidden />
         </Link>
         <Link href="https://x.com/llcors" aria-label="X Profile">
-          <Twitter size={24} aria-hidden />
+          <Image
+            height="24"
+            width="24"
+            src="https://unpkg.com/simple-icons@v13/icons/x.svg"
+            alt="X (Twitter)"
+            aria-hidden
+          />
+        </Link>
+        <Link
+          href="https://docs.google.com/document/d/1NvZ0JrBKd_C42G7u32PVn69v0q2-7Czw/edit?usp=sharing&ouid=117923712126612286389&rtpof=true&sd=true"
+          aria-label="Curriculum Vitae"
+        >
+          <FileUser size={24} aria-hidden />
         </Link>
       </div>
       <div className="mt-20 space-y-5">
