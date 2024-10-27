@@ -42,7 +42,11 @@ export default function Home() {
         </p>
       </div>
       <div className="mt-8 flex items-center justify-center gap-4 sm:justify-start">
-        <Link href="https://github.com/ilcors-dev" aria-label="Github Profile">
+        <Link
+          href="https://github.com/ilcors-dev"
+          aria-label="Github Profile"
+          target="_blank"
+        >
           <Image
             height="24"
             width="24"
@@ -54,10 +58,15 @@ export default function Home() {
         <Link
           href="https://www.linkedin.com/in/lucacorsettidev"
           aria-label="Linkedin Profile"
+          target="_blank"
         >
           <Linkedin size={24} aria-hidden />
         </Link>
-        <Link href="https://x.com/llcors" aria-label="X Profile">
+        <Link
+          href="https://x.com/llcors"
+          aria-label="X Profile"
+          target="_blank"
+        >
           <Image
             height="24"
             width="24"
@@ -69,6 +78,7 @@ export default function Home() {
         <Link
           href="https://docs.google.com/document/d/1NvZ0JrBKd_C42G7u32PVn69v0q2-7Czw/edit?usp=sharing&ouid=117923712126612286389&rtpof=true&sd=true"
           aria-label="Curriculum Vitae"
+          target="_blank"
         >
           <FileUser size={24} aria-hidden />
         </Link>
