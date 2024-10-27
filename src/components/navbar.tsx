@@ -13,7 +13,7 @@ const Navbar = React.forwardRef<
       ref={ref}
       className={classNames(
         className,
-        "flex flex-col items-center justify-between p-4 sm:p-10 md:flex-row lg:p-6",
+        "flex flex-col items-center justify-between sm:py-10 md:flex-row lg:py-6",
       )}
       role="navigation"
     >
