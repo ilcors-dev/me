@@ -76,6 +76,19 @@ export default function Home() {
           />
         </Link>
         <Link
+          href="https://leetcode.com/u/ilcors-dev/"
+          aria-label="Leetcode Profile"
+          target="_blank"
+        >
+          <Image
+            height="24"
+            width="24"
+            src="https://unpkg.com/simple-icons@v13/icons/leetcode.svg"
+            alt="Leetcode"
+            aria-hidden
+          />
+        </Link>
+        <Link
           href="https://docs.google.com/document/d/1NvZ0JrBKd_C42G7u32PVn69v0q2-7Czw/edit?usp=sharing&ouid=117923712126612286389&rtpof=true&sd=true"
           aria-label="Curriculum Vitae"
           target="_blank"
