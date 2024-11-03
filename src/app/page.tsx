@@ -2,7 +2,6 @@ import projects from "@/../config/projects.json";
 import Navbar from "@/components/navbar";
 import ProjectCard from "@/components/project-card";
 import { chunk } from "@/util/lib";
-import { FileUser, Linkedin } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +49,7 @@ export default function Home() {
           <Image
             height="24"
             width="24"
-            src="https://unpkg.com/simple-icons@v13/icons/github.svg"
+            src="https://cdn.simpleicons.org/github/black/white"
             alt="Github"
             aria-hidden
           />
@@ -60,7 +59,13 @@ export default function Home() {
           aria-label="Linkedin Profile"
           target="_blank"
         >
-          <Linkedin size={24} aria-hidden />
+          <Image
+            height="24"
+            width="24"
+            src="https://cdn.simpleicons.org/linkedin/black/white"
+            alt="Linkedin"
+            aria-hidden
+          />
         </Link>
         <Link
           href="https://x.com/llcors"
@@ -70,7 +75,7 @@ export default function Home() {
           <Image
             height="24"
             width="24"
-            src="https://unpkg.com/simple-icons@v13/icons/x.svg"
+            src="https://cdn.simpleicons.org/x/black/white"
             alt="X (Twitter)"
             aria-hidden
           />
@@ -83,7 +88,7 @@ export default function Home() {
           <Image
             height="24"
             width="24"
-            src="https://unpkg.com/simple-icons@v13/icons/leetcode.svg"
+            src="https://cdn.simpleicons.org/leetcode/black/white"
             alt="Leetcode"
             aria-hidden
           />
@@ -93,7 +98,13 @@ export default function Home() {
           aria-label="Curriculum Vitae"
           target="_blank"
         >
-          <FileUser size={24} aria-hidden />
+          <Image
+            height="24"
+            width="24"
+            src="https://cdn.simpleicons.org/googledocs/black/white"
+            alt="Curriculum Vitae"
+            aria-hidden
+          />
         </Link>
       </div>
       <div className="mt-20 space-y-5">
