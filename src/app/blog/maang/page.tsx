@@ -1,0 +1,225 @@
+import Navbar from "@/components/navbar";
+import { CalendarIcon } from "lucide-react";
+import { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "My journey to Maang",
+  description:
+    "The path that led me into a Maang. From the beginning until the first achievement.",
+};
+
+export default function Page() {
+  return (
+    <main className="container mx-auto p-4 sm:p-10 lg:p-6">
+      <Navbar />
+      <article>
+        <header className="mb-8 mt-10">
+          <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-gray-100">
+            My journey to a Maang
+          </h1>
+          <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <CalendarIcon className="mr-2 h-4 w-4" />
+            <time dateTime="2024-11-03">November 3, 2024</time>
+          </div>
+        </header>
+
+        <div className="prose dark:prose-invert max-w-none">
+          <p>
+            After years of studying and working, I almost lost track of what I
+            wanted to achieve: working at a MAANG. Today I can finally say that
+            what seemed like a dream 5 years ago, it&apos;s starting to take
+            form.
+          </p>
+
+          <h2>The beginning</h2>
+          <p>
+            The first memory I have of using a PC dates back to around 2006. I
+            was a boy in my bedroom, playing Solitaire and Pinball on a really
+            old, scrappy computer running Windows XP. I wonder where that PC is
+            now.
+          </p>
+
+          <p>
+            A few years later, around the age of 12, I discovered Minecraft and
+            was really hyped about it. My brother handed me an old, somewhat
+            broken PC running Windows 7. I didn&apos;t want to pay for it (and
+            honestly didn&apos;t how to do it) and I tried to install it on my
+            own. Needless to say, I just ended up filling that poor computer
+            with viruses lol.
+          </p>
+
+          <p>
+            When I entered high school, I chose to study IT under the impression
+            that video games === IT. For the first two years out of five, I
+            didn&apos;t learn much about anything really. My focus was more on
+            playing video games. League of Legends is a great game btw.
+          </p>
+
+          <h2>The turning point</h2>
+          <p>
+            In my third year, things took a turn. My brother offered me a summer
+            internship at his company, which mainly built electrical stuff. It
+            was a small place with a lot of C programming involved (<b>goat</b>
+            ). I was thrown into the deep end, learning how things worked from
+            the ground up, from software to physical microcontrollers. I mostly
+            observed at first, seeing magicians to their work but then my
+            brother assigned me a task: complete a function to highlight
+            keypresses on a touch panel keyboard.
+          </p>
+
+          <p>
+            I barely knew how to <b>System.out.println</b> with Java but
+            nevertheless I tried ultimately failing miserably.{" "}
+            <b>Something clicked in me tho</b>. I got that rush that every
+            software engineer gets: <b>the thrill of solving a problem</b>.
+          </p>
+
+          <p>
+            The following summer, I returned to the company. This time, they
+            asked me to build a web interface for an IoT project. Terms like
+            JavaScript, HTML, and SQL were thrown around — technologies I
+            hadn&apos;t encountered yet in school. The only thing I could do was
+            learning on my own and so I did. I dove into research and managed to
+            create the first (buggy, scrappy and insecure) version of the
+            website that I would refactor the next year by using Laravel &
+            Vuejs, two technologies that I continue to use today.
+          </p>
+
+          <h2>The trajectory</h2>
+          <p>
+            After high school I decided to study computer engineering at
+            university, hoping one day of joining a MAANG.{" "}
+            <b>The first two years of my bachelor&apos;s were tough</b>.
+            Calculus, Physics, and Telecommunications were challenging, beat me
+            to my knees. Thankfully,{" "}
+            <Link href="https://babeldev0.github.io/babelog/">
+              a high school buddy
+            </Link>{" "}
+            often studied with me, helping me get through it.
+          </p>
+
+          <p>
+            Around the same time, my brother was starting a startup and invited
+            me to join. I was super excited. Admittedly, I preferred (and still
+            prefer) building things over studying, but I managed to juggle both.
+            The startup wasn&apos;t aiming to revolutionize anything; we just
+            wanted to create software to help people and businesses. It was
+            during this time that my passion for software engineering truly came
+            to life.{" "}
+            <b>I was building things that people used, and it felt great.</b>
+          </p>
+
+          <h2>The realization</h2>
+          <p>
+            After earning my bachelor&apos;s degree while gaining some work
+            experience, I faced another crossroads: Should I pursue a
+            master&apos;s degree? I decided to go for it. However, I realized I
+            was losing momentum. By 23, I had experience but not with any
+            well-known companies, and graduation was approaching. Panic set in.
+            Despite all I&apos;d done, it felt like I didn&apos;t achieve much.
+            <b>Now or never</b>. I started applying for internships at any
+            relevant company, even MAANG&apos; even though it seemed impossible
+            to join one of them. I thought my work experience and degree would
+            make it easy. I was wrong. I received several online assessments
+            (OAs) and bombed them all. Despite years of studying and working, I
+            really had no to little knowledge on data structures and algorithms.
+            It was kind of a <b>cold shower</b>.
+          </p>
+
+          <h2>I&apos;m late</h2>
+          <p>
+            We are now in the present, late August 2024. I knew I had to address
+            my weak spots so I started grinding LeetCode problems while
+            continuing to send out resumes, but I had a little happy problem: a
+            two-week road trip to Scotland with friends was already planned for
+            early September - not ideal timing, ugh.
+          </p>
+
+          <p>
+            Fortunately for me, not every company was rejecting me at first, so
+            my years of working and studying were somewhat paying off. I managed
+            to complete two OAs during the trip, connecting through a
+            friend&apos;s mobile hotspot. The first one was for Databricks, I
+            completed it by a lake. The other one was for Stripe, and I was able
+            to do it from a mountain parking lot (
+            <Link href="https://www.google.com/maps/place/The+Quiraing/@57.6409191,-6.273846,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPqDjwL7xHDKLSAaXfFC2W68Bup08HuGlavfv0x!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPqDjwL7xHDKLSAaXfFC2W68Bup08HuGlavfv0x%3Dw128-h86-k-no!7i7360!8i4912!4m16!1m8!3m7!1s0x488dcf26b3ceaf6b:0xc9e9d35800763341!2sQuiraing+walk!8m2!3d57.628531!4d-6.2897133!10e5!16s%2Fg%2F11c6rhzkbx!3m6!1s0x488dcf26b2a5dd71:0xb94f79a2919c1f3b!8m2!3d57.6409191!4d-6.273846!10e5!16s%2Fg%2F11b6ghr_7p?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D#">
+              Quiraing
+            </Link>
+            , beautiful place btw). Returning in late September, to my surprise
+            I had passed the OA for Stripe and they scheduled the onsite
+            interview in early October. I was super happy about it.
+          </p>
+
+          <h2>The first cold shower</h2>
+          <p>
+            The onsite interview went somewhat well I though, it wasn&apos;t the
+            classic LeetCode problem, it was more of a day to day type of
+            problem that engineers at Stripe faced. I was able to solve 2 out of
+            the 4 problems steps and ultimately got <b>rejected</b>. Honestly,
+            thinking back, <b>I was not ready for it</b>.{" "}
+            <b>I barely knew how to reverse a linked list</b>. What was I
+            thinking?
+          </p>
+
+          <h2>The grind</h2>
+          <p>
+            It was time to double down. I dedicated as many hours as possible
+            each day (
+            <Link href="https://x.com/llcors/status/1846291894533607474">
+              11+ hours
+            </Link>
+            ) to studying data structures and algorithms while persistently
+            applying to companies.
+          </p>
+
+          <h2>The opportunity</h2>
+          <p>
+            After countless applications - honestly, I lost count after a while
+            - Amazon sent me an OA. I knew I couldn&apos;t afford to fail it, It
+            was now late mid October and I felt like many positions would start
+            closing until next year. I poured everything I&apos;d learned into
+            it and managed to pass 21 out of 30 test cases. Not perfect, but
+            enough.
+          </p>
+
+          <p>
+            Finally, I received an invitation for an onsite interview scheduled
+            for the following week. With only five days to prepare, I immersed
+            myself in advanced topics like backtracking and dynamic programming,
+            and practiced with mock interviews with random people online.
+          </p>
+          <p>
+            Those were five days of <b>pure grind</b>.
+          </p>
+          <p>
+            {" "}
+            On the day of the interview, surprisingly, I wasn&apos;t nervous. I
+            had prepared as best as I could. The interviewer was friendly, and I
+            was able to solve the coding problems and confidently answer the
+            behavioral questions I&apos;d practiced. I felt good about it. Five
+            long days later, the result came in: <b> an offer from Amazon</b>.
+            Without hesitation, I accepted it.
+          </p>
+
+          <p>
+            Next summer, I&apos;ll be living in Luxembourg for six months,
+            working at a MAANG. What was only a dream some years ago is now
+            becoming a reality.
+          </p>
+
+          <p>
+            <b>
+              Take risks guys. Embrace the ugly, the miserable, don&apos;t be
+              afraid of being hurt.
+            </b>
+          </p>
+
+          <i>
+            Yes I do like motivational speeches. Yes I do like David Goggins.
+          </i>
+        </div>
+      </article>
+    </main>
+  );
+}
