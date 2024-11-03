@@ -1,9 +1,9 @@
 import classNames from "classnames";
-import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
 import Script from "next/script";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -64,7 +64,13 @@ export default function RootLayout({
       >
         <div className="relative transition-all duration-300">
           {/* <ThemeSwitcher className="absolute right-4 z-10" /> */}
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem={true}
+          >
+            {children}
+          </ThemeProvider>
         </div>
         {/* <Footer /> */}
       </body>
