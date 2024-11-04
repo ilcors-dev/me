@@ -13,14 +13,14 @@ export default function Page() {
   return (
     <main className="container mx-auto p-4 sm:p-10 lg:p-6">
       <Navbar />
-      <article>
-        <header className="mb-8 mt-10">
-          <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-gray-100">
+      <article className="mt-10">
+        <header className="mb-8">
+          <h1 className="mb-3 text-center text-2xl font-bold sm:text-start sm:text-4xl">
             My journey to a MAANG
           </h1>
-          <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+          <div className="flex items-center justify-center text-sm text-gray-500 dark:text-gray-400 sm:justify-start">
             <CalendarIcon className="mr-2 h-4 w-4" />
-            <time dateTime="2024-11-03">November 3, 2024</time>
+            <time dateTime="2024-11-03">November 4, 2024</time>
           </div>
         </header>
 
@@ -66,7 +66,7 @@ export default function Page() {
             was a small place with a lot of C programming involved (<b>goat</b>
             ). I was thrown into the deep end, learning how things worked from
             the ground up, from writing the software to uploading it to the
-            hardware board. I mostly observed at first, seeing magicians to
+            hardware board. I mostly observed at first, seeing magicians do
             their work until one day my brother assigned me a task: complete a
             function to highlight keypresses on a touch panel keyboard.
           </p>

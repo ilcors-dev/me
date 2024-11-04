@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const memojis = [
@@ -27,14 +28,16 @@ const MemojiLoop: React.FC = () => {
   }, []);
 
   return (
-    <Image
-      id="memoji"
-      alt="logo"
-      src={currentMemoji}
-      width={128}
-      height={128}
-      className="object-cover transition-all duration-500 ease-in-out sm:h-[136px] sm:w-[136px] lg:h-[172px] lg:w-[172px]"
-    />
+    <Link href="/">
+      <Image
+        id="memoji"
+        alt="logo"
+        src={currentMemoji}
+        width={128}
+        height={128}
+        className="object-cover transition-all duration-500 ease-in-out sm:h-[136px] sm:w-[136px] lg:h-[172px] lg:w-[172px]"
+      />
+    </Link>
   );
 };
 
