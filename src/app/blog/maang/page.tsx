@@ -250,7 +250,7 @@ export default function Page() {
           <p>
             <b>
               Take risks guys. Don&apos;t be afraid of being hurt. There&apos;s
-              great joy in the grind
+              great joy in the grind.
             </b>
           </p>
 
