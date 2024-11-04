@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   icons: {
-    icon: "memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png",
+    icon: "https://ilcors.dev/memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png",
   },
   authors: {
     name: "Luca Corsetti",
@@ -36,7 +36,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     countryName: "Italy",
-    images: "memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png",
+    images:
+      "https://ilcors.dev/memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png",
     siteName: "Luca Corsetti personal website",
     description: "A software engineer from Italy, Bologna.",
     url: "https://ilcors.dev",
