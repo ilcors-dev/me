@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "My journey to MAANG",
+  title: "My journey to a MAANG",
   description:
     "The path that led me into a MAANG. From the beginning until the first achievement.",
 };
