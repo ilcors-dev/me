@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "My journey to a MAANG",
+  title: "My journey to MAANG",
   description:
     "The path that led me into a MAANG. From the beginning until the first achievement.",
 };
@@ -16,7 +16,7 @@ export default function Page() {
       <article className="mt-10">
         <header className="mb-8">
           <h1 className="mb-3 text-center text-2xl font-bold sm:text-start sm:text-4xl">
-            My journey to a MAANG
+            My journey to MAANG
           </h1>
           <div className="flex items-center justify-center text-sm text-gray-500 dark:text-gray-400 sm:justify-start">
             <CalendarIcon className="mr-2 h-4 w-4" />

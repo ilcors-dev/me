@@ -21,7 +21,7 @@ export default function Page() {
         <div className="mt-14 space-y-4">
           <Link href="/blog/maang" className="group">
             <p className="text-xl font-bold group-hover:underline">
-              My journey to a MAANG
+              My journey to MAANG
             </p>
             <div className="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400">
               <CalendarIcon className="mr-2 h-4 w-4" />
