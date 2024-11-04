@@ -143,11 +143,11 @@ export default function Page() {
             graduation was approaching. <b>Panic set in</b>. Despite all
             I&apos;d done, it felt like I didn&apos;t achieve much.{" "}
             <b>It was now or never</b>. I started applying for internships at
-            any relevant company, even MAANG even though it seemed impossible to
-            join one of them. I thought my work experience and degree would make
-            it easy. I was wrong. Despite years of studying and working, I
-            really had no to little knowledge on data structures and algorithms.
-            It was kind of a <b>cold shower</b>.
+            any relevant company dreaming of a MAANG, even though it seemed
+            impossible. I thought my work experience and degree would make it
+            easy. I was wrong. Despite years of studying and working, I really
+            had no to little knowledge on data structures and algorithms. It was
+            kind of a <b>cold shower</b>.
           </p>
 
           <h2>I&apos;m late</h2>

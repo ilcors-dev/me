@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Blog browser",
+  title: "📚 Blog",
   description:
     "A glimpse of my thoughts, ideas and projects. A place where I share bits of me.",
 };
