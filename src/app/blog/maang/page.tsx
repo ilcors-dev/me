@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "My journey to MAANG",
   description:
-    "The path that led me into a MAANG. From the beginning until the first achievement.",
+    "The path that led me into a MAANG. From the beginning. Step after step.",
 };
 
 export default function Page() {
@@ -55,7 +55,7 @@ export default function Page() {
             playing video games.{" "}
             <i>
               League of Legends is a great game btw. (but don&apos;t spend too
-              time much on it)
+              much time on it)
             </i>
           </p>
 
