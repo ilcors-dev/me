@@ -6,7 +6,18 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "My journey to MAANG",
   description:
-    "The path that led me into a MAANG. From the beginning. Step after step.",
+    "Where my passion for programming began, leading to my first big achievement - step by step.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    countryName: "Italy",
+    images:
+      "https://ilcors.dev/memojis/7e539d2c025d7d4e48fbd6607da77b48-sticker.png",
+    siteName: "My journey to MAANG",
+    description:
+      "Where my passion for programming began, leading to my first big achievement - step by step.",
+    url: "https://ilcors.dev/blog/maang",
+  },
 };
 
 export default function Page() {
