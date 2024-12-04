@@ -175,7 +175,7 @@ export default function Page() {
             my years of working and studying were somewhat paying off. I managed
             to complete two OAs during the trip, connecting through a
             friend&apos;s mobile hotspot. The first one was for Databricks which
-            I completed it{" "}
+            I completed{" "}
             <Link
               target="_blank"
               href="https://photos.app.goo.gl/9yzGArLp1E5H2pFA7"
