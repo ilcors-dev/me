@@ -40,74 +40,44 @@ export default function Home() {
           enjoy feeding my brain with new problems to solve.
         </p>
       </div>
-      <div className="mt-8 flex items-center justify-center gap-4 sm:justify-start">
+      <div className="mt-6 flex items-end justify-center gap-4 sm:justify-start [&>*]:font-mono [&>*]:underline">
         <Link
           href="https://github.com/ilcors-dev"
           aria-label="Github Profile"
           target="_blank"
         >
-          <Image
-            height="24"
-            width="24"
-            src="https://cdn.simpleicons.org/github/black/white"
-            alt="Github"
-            aria-hidden
-          />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/lucacorsettidev"
-          aria-label="Linkedin Profile"
-          target="_blank"
-        >
-          <Image
-            height="24"
-            width="24"
-            src="https://cdn.simpleicons.org/linkedin/black/white"
-            alt="Linkedin"
-            aria-hidden
-          />
+          github
         </Link>
         <Link
           href="https://x.com/llcors"
           aria-label="X Profile"
           target="_blank"
         >
-          <Image
-            height="24"
-            width="24"
-            src="https://cdn.simpleicons.org/x/black/white"
-            alt="X (Twitter)"
-            aria-hidden
-          />
+          X
         </Link>
         <Link
           href="https://leetcode.com/u/ilcors-dev/"
           aria-label="Leetcode Profile"
           target="_blank"
         >
-          <Image
-            height="24"
-            width="24"
-            src="https://cdn.simpleicons.org/leetcode/black/white"
-            alt="Leetcode"
-            aria-hidden
-          />
+          leetcode
         </Link>
         <Link
           href="https://docs.google.com/document/d/1NvZ0JrBKd_C42G7u32PVn69v0q2-7Czw/edit?usp=sharing&ouid=117923712126612286389&rtpof=true&sd=true"
           aria-label="Curriculum Vitae"
           target="_blank"
         >
-          <Image
-            height="24"
-            width="24"
-            src="https://cdn.simpleicons.org/googledocs/black/white"
-            alt="Curriculum Vitae"
-            aria-hidden
-          />
+          résumé
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/lucacorsettidev"
+          aria-label="Linkedin Profile"
+          target="_blank"
+        >
+          linkedin
         </Link>
       </div>
-      <div className="mt-20 space-y-5">
+      <div className="mt-16 space-y-5">
         <h2 className="text-xl font-bold sm:text-2xl">Projects</h2>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
