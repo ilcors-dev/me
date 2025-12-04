@@ -4,3 +4,20 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    automerge: true
+    commit-message:
+      prefix: "chore"
+    versioning-strategy: increase-if-necessary
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "all"
+        update-types: ["minor", "patch"]
+    pull-request-branch-name:
+      separator: "-"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    automerge: true
+    commit-message:
+      prefix: "chore"
