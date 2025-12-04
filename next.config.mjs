@@ -14,17 +14,8 @@ const nextConfig = {
      * @see https://nextjs.org/docs/app/api-reference/components/image#unoptimized
      */
     images: {
-      unoptimized: true,
+        unoptimized: true,
     },
-
-    webpack: (config, options) => {
-        config.experiments = {
-          asyncWebAssembly: true,
-          syncWebAssembly: true,
-          layers: true,
-        }
-        return config
-      },
 };
 
 export default nextConfig;
