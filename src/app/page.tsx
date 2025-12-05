@@ -18,7 +18,7 @@ export default function Home() {
       <div className="mt-10 space-y-8">
         <h1 className="text-center text-2xl font-bold sm:text-start sm:text-4xl">
           👋🏻 I&apos;m{" "}
-          <span className="bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent dark:from-green-500 dark:to-green-300">
+          <span className="bg-linear-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent dark:from-green-500 dark:to-green-300">
             Luca
           </span>
           , a software engineer from Italy, Bologna.
@@ -40,7 +40,7 @@ export default function Home() {
           enjoy feeding my brain with new problems to solve.
         </p>
       </div>
-      <div className="mt-6 flex items-end justify-center gap-4 sm:justify-start [&>*]:font-mono [&>*]:underline">
+      <div className="mt-6 flex items-end justify-center gap-4 sm:justify-start *:font-mono *:underline">
         <Link
           href="https://github.com/ilcors-dev"
           aria-label="Github Profile"
