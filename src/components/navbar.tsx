@@ -21,7 +21,13 @@ const Navbar = React.forwardRef<
       <MemojiLoop />
       <div className="flex items-center space-x-4">
         <Link
-          className="mr-5 text-xl font-semibold hover:underline"
+          className="mr-8 text-xl font-semibold hover:underline"
+          href="/bookshelf"
+        >
+          Bookshelf
+        </Link>
+        <Link
+          className="mr-8 text-xl font-semibold hover:underline"
           href="/blog"
         >
           Blog

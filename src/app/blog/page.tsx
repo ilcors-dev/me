@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "📚 Blog",
+  title: "✍🏻  Blog",
   description:
     "A glimpse of my thoughts, ideas and projects. A place where I share bits of me.",
 };
@@ -15,7 +15,7 @@ export default function Page() {
       <Navbar />
       <div className="mt-10">
         <h1 className="text-center text-2xl font-bold sm:text-start sm:text-4xl">
-          📚 Blog
+          ✍🏻  Blog
         </h1>
 
         <div className="mt-14 space-y-4">
